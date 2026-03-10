@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Password Validation</h3>
+
+<input type="password" id="pass" placeholder="Enter password">
+<button onclick="checkPassword()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkPassword() {
+
+    const password = document.getElementById("pass").value;
+
+    const pattern = /^(?=.*[A-Z]).{8,10}$/;
+
+    if(pattern.test(password)){
+        document.getElementById("result").innerText = "Valid Password";
+    } else {
+        document.getElementById("result").innerText = "Invalid Password";
+    }
+
+}
+</script>
+
+</body>
+</html>
